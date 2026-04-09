@@ -18,7 +18,7 @@ def filtra_per_genere(libri: list[dict], genere: str) -> list[dict]:
     filtrate = []
     for libro in libri:
         if genere == libro["genere"]:
-            filtrate.append(genere)
+            filtrate.append(libro)
     return filtrate
 
 
@@ -26,7 +26,7 @@ def libri_disponibili(libri: list[dict]) -> list[dict]:
     filtrate = []
     for libro in libri:
         if libro["copie_disponibili"] > 0:
-            filtrate.append(libro["copie_disponibili"])
+            filtrate.append(libro)
     return filtrate
 
 
@@ -34,7 +34,7 @@ def cerca_per_autore(libri: list[dict], autore: str) -> list[dict]:
     filtrate = []
     for libro in libri:
         if autore == libro["autore"]:
-            filtrate.append(libro["autore"])
+            filtrate.append(libro)
     return filtrate
 
 
