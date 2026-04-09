@@ -15,6 +15,7 @@ def presta_libro(biblioteca:dict,libro_da_prestare:dict)->bool:
     for libro in biblioteca:
         if libro_disponibile(libro) == True:
             libro_da_prestare["copie_disponibili"]-=1
+            print(f"{info_libro(libro_da_prestare)}")
             return True
         else:
             return False
@@ -23,6 +24,7 @@ def presta_libro(biblioteca:dict,libro_da_prestare:dict)->bool:
 def restituisci_libro(biblioteca:dict,libro:dict) -> bool:
     if presta_libro(biblioteca,libro) == True:
         libro["copie_disponibili"]+=1
+        print(f"{info_libro(libro)}")
         return True
     else:
         return False

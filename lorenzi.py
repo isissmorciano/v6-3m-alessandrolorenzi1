@@ -29,11 +29,19 @@ def main():
     
 
 
-    u1 = prestiti.crea_utente("Mario", "Rossi")
-    u2 = prestiti.crea_utente("Laura", "Bianchi")
-    u3 = prestiti.crea_utente("Carlo", "Verdi")
+    
     biblioteca = prestiti.crea_biblioteca()
-    prestiti.aggiungi_libro(biblioteca,)
+    prestiti.aggiungi_libro(biblioteca,l1)
+    prestiti.aggiungi_libro(biblioteca,l2)
+    prestiti.aggiungi_libro(biblioteca,l3)
+    prestiti.aggiungi_libro(biblioteca,l4)
+    prestato = prestiti.presta_libro(biblioteca,l1)
+    if prestato == True:
+        print("Libro prestato con successo!")
+    else:
+        print("Errore nel prestito del libro!")
+    
+
 
 
 
